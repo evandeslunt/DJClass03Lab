@@ -1,0 +1,70 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 24, 2014, 6:59:01 PM
+    Author     : Lizzy
+*/
+body { font-family: Times New Roman; }
+h1 { text-align: center; }
+#wrapper { 
+	width: 70%; 
+	margin-top: 0; 
+	padding: 5em 10em 5em 10em;
+	overflow: auto;
+        background-color: #E6E6FF;
+}
+
+#contactInfo{
+    
+}
+
+#summary{
+    
+}
+
+#education{
+    
+}
+
+#work{
+    
+}
+
+#skills{
+    
+}
+
+.company{
+    
+}
+
+.dateRange{
+    
+}
+
+.edu{
+    
+}
+
+.title{
+    
+}
+
+a{
+    
+}
+
+#WCTC{
+    
+}
+
+#NCL{
+    
+}
+
+#McB{
+    
+}
