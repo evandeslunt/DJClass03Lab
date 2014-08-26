@@ -13,13 +13,15 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Today's Date</h1>
+        <h1 style='color: red;'>Today's Date</h1>
         <p>The current date and time is: 
             <%
               Date date = new Date();  
               out.println(date);
             %>    
-        
         </p>
+        <script type='text/javascript'>
+            alert("welkommen!");
+        </script>
     </body>
 </html>
