@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
-This webpage allows the user to input the length and width of a rectangle
-so that the area of the rectangle can be calculated.
+This webpage allows the user to  perform simple geometry calculations:
+area of a rectangle, area of a circle, and pythagorean theorem.
 -->
 <html>
     <head>
@@ -14,9 +14,12 @@ so that the area of the rectangle can be calculated.
          <div id="head">
             <h1>Geometry Calculators</h1>
             <p>Distributed Java JSP/Servlet practice.</p>
+            <p>Liz Ife Van Deslunt 9/2014.</p>
         </div>
     <div id="wrapper">
-       
+       <%! String divResultStart = "<div class=\"result\">"; 
+           String divResultEnd = "</div>";
+       %>
         <div class="block">
             <h2>Area of a Rectangle</h2>
             <p>Area of a rectangle is calculated with the following formula:<br>
@@ -33,6 +36,15 @@ so that the area of the rectangle can be calculated.
             </form>
             
             
+            <%
+                Object rectResult = request.getAttribute("rectangleArea");
+                if(rectResult != null){
+                    out.print(divResultStart 
+                                + "Area: " + rectResult.toString() 
+                                + divResultEnd);
+                }
+            %>
+            </div>
             
         </div>
         
@@ -47,6 +59,15 @@ so that the area of the rectangle can be calculated.
                 </div>
                     <input type="submit" id="sumbitCirc" value="Calculate Area"/>
             </form>
+            
+            <%
+                Object circleResult = request.getAttribute("circleArea");
+                if(circleResult != null){
+                    out.print(divResultStart 
+                                + "Area: " + circleResult.toString() 
+                                + divResultEnd);
+                }
+            %>
         </div> 
         
         <div class="block">
@@ -64,6 +85,15 @@ so that the area of the rectangle can be calculated.
                 </div>
                 <input type="submit" id="sumbitTriangle" value="Find c"/>
             </form>
+            
+            <%
+                Object triangleResult = request.getAttribute("sideC");
+                if(triangleResult != null){
+                    out.print(divResultStart 
+                                + "c = " + triangleResult.toString() 
+                                + divResultEnd);
+                }
+            %>
         </div>
     </div>
     </body>

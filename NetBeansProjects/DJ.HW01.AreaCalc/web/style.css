@@ -1,0 +1,51 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 3, 2014, 9:39:57 PM
+    Author     : Lizzy
+*/
+
+body { background-color: #dad8d8; }
+#head { 
+        background-color: #181717; 
+        color: #f2f2f2; 
+        padding: 10px 10px 10px 10px; 
+        margin: 0 0 0 0;
+        text-align: center;
+}
+#wrapper { padding: 15px 50px 15px 50px; text-align: center; }
+
+.block {
+        float: left;
+        width: 400px;
+}
+
+.result, form {
+        width: 325px;
+        padding: 1em 1em 1em 1em;
+        margin: 1em 1em 1em 1em;
+        margin-left: auto;
+	margin-right: auto;
+        border: #383838 1px solid;
+        border-radius: 3px;
+}
+
+.result {
+        text-align: center;
+        font-size: 125%;
+        background-color: #db5d52;
+}
+
+/* Form Formatting */
+form { 
+        text-align: left;
+        background-color: #f0f0f0;
+}
+
+/* This code makes labels and input display in a grid */
+label { width: 100px; display: inline-block; margin-bottom: 10px; }
+input { display: inline-block; }
+.inputarea { padding: 0 0 5px 0; }

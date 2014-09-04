@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 package controller;
 
@@ -9,15 +14,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.AreaCalculatorService;
+import model.CircleCalculatorService;
 
 /**
- * 
+ *
  * @author Lizzy
  */
-@WebServlet(name = "Calculator", urlPatterns = {"/Calculator"})
-public class Calculator extends HttpServlet {
-    private final String RESULT_PAGE = "result.jsp";
+@WebServlet(name = "CircleCalculator", urlPatterns = {"/CircleCalculator"})
+public class CircleCalculator extends HttpServlet {
+    private final String RESULT_PAGE = "geometryCalculators.jsp";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -31,31 +36,16 @@ public class Calculator extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        //Retrieve parameters from form and convert to double
-        String strLength = request.getParameter("length");
-        String strWidth = request.getParameter("width");
-        Double length = 0.0;
-        Double width = 0.0;
-        try{
-        length = new Double(strLength);
-        width = new Double(strWidth);
-        } catch(Exception e){
-            //just leave the incorrect value as 0.
-        }
+        String radius = request.getParameter("radius");
+        double area = 0.0;
         
-        //Pass parameters to Model
-        AreaCalculatorService calc = new AreaCalculatorService();
-        double area = calc.calcArea(length, width);
-
-        //return the data to the view
-        request.setAttribute("area", area);
-        request.setAttribute("length", length);
-        request.setAttribute("width", width);
-
+        CircleCalculatorService ccs = new CircleCalculatorService();
+        area = ccs.calcArea(radius);
+        
+        request.setAttribute("circleArea", area);
+        
         RequestDispatcher view = request.getRequestDispatcher(RESULT_PAGE);
         view.forward(request, response);
-        
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

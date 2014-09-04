@@ -6,7 +6,17 @@ package model;
  */
 public class AreaCalculatorService {
 
-    public double calcArea(double length, double width){
+    public double calcArea(String length1, String length2){
+        double length = 0.0;
+        double width = 0.0;
+        
+        try{
+        length = new Double(length1);
+        width = new Double(length2);
+        } catch(Exception e){
+          //just leave the invalid values.
+        }
+        
         double area = 0;
         
         if (length >= 0 && width >= 0){
