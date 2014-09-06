@@ -42,6 +42,8 @@ public class RectangleCalculator extends HttpServlet {
 
         //return the data to the view
         request.setAttribute("rectangleArea", area);
+        request.setAttribute("rectangleLength", length);
+        request.setAttribute("rectangleWidth", width);
 
         RequestDispatcher view = request.getRequestDispatcher(RESULT_PAGE);
         view.forward(request, response);

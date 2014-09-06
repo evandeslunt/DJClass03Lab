@@ -45,6 +45,8 @@ public class TriangleCalculator extends HttpServlet {
         sideC = tcs.getLegC(sideA, sideB);
         
         request.setAttribute("sideC", sideC);
+        request.setAttribute("sideA", sideA);
+        request.setAttribute("sideB", sideB);
         
         RequestDispatcher view = request.getRequestDispatcher(RESULT_PAGE);
         view.forward(request, response);

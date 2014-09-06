@@ -32,6 +32,6 @@ public class CircleCalculatorService {
      * @return The area of the circle.
      */
     public double calcArea(double radius){
-        return 2 * PI * radius;
+        return PI * radius * radius;
     }
 }

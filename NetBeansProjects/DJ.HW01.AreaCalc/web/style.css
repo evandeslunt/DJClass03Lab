@@ -21,6 +21,7 @@ body { background-color: #dad8d8; }
 .block {
         float: left;
         width: 400px;
+        text-align: center;
 }
 
 .result, form {
@@ -38,6 +39,8 @@ body { background-color: #dad8d8; }
         font-size: 125%;
         background-color: #db5d52;
 }
+
+.block p { height: 3em; }
 
 /* Form Formatting */
 form { 

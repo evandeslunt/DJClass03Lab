@@ -43,6 +43,7 @@ public class CircleCalculator extends HttpServlet {
         area = ccs.calcArea(radius);
         
         request.setAttribute("circleArea", area);
+        request.setAttribute("radius", radius);
         
         RequestDispatcher view = request.getRequestDispatcher(RESULT_PAGE);
         view.forward(request, response);
